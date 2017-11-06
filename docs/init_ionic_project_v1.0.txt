@@ -1,0 +1,23 @@
+■Ionicのインストールを行う
+
+■まずnode.jsをインストールする
+https://nodejs.org/ja/
+Node.jsをインストールする。（推奨版を利用）
+
+Node.jsをインストールするとnpmコマンドを使えるようになりますよ。
+
+■Ionicをインストールする
+以下のコマンドを実行
+
+$ npm install -g cordova ionic
+
+これでPCにIonicがインストールされました。
+
+■Ionicのプロジェクトを作成する（※プロジェクトが既にある場合は不要）
+以下のコマンドでテンプレートからIonicのプロジェクトを作成する。
+
+$ ionic start myApp sidemenu
+
+■動かしてみよう
+プロジェクトのディレクトリに移動して、以下のコマンドを入力する
+$ ionic serve
