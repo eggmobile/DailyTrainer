@@ -22,6 +22,10 @@ $ git clone git@github.com:eggmobile/DailyTrainer.git
 
 公開鍵の登録が完了していればパスフレーズの入力が求められるので、入力してエンターを押すとクローンされるはず。
 
+■Visual Studio Codeをインストール
+以下のページからVisual Studio Codeをインストールする
+https://code.visualstudio.com/
+
 
 
 
