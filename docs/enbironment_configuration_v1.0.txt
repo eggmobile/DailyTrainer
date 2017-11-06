@@ -1,0 +1,29 @@
+環境構築
+
+■Gitのインストール
+https://git-for-windows.github.io/
+
+Windows向けのインストーラーからインストールする
+
+■Githubにユーザー登録
+
+
+■公開鍵を登録
+https://qiita.com/muneo/items/1321bf8cdb21178a73e2#%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E4%BD%9C%E6%88%90%E3%81%AE%E5%89%8D%E3%81%AB
+
+上記の手順を元に、公開鍵をGithubに登録する。
+
+■プロジェクトをクローンする
+プロジェクトを設置したい場所でGit Bashを開く
+（任意のフォルダで右クリックして、「Git bash here」を選択してGit Bashを開く。）
+以下のコマンドを入力。
+
+$ git clone git@github.com:eggmobile/DailyTrainer.git
+
+公開鍵の登録が完了していればパスフレーズの入力が求められるので、入力してエンターを押すとクローンされるはず。
+
+
+
+
+
+
