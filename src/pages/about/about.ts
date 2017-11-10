@@ -9,10 +9,18 @@ import { TrainingDetailPage } from '../trainingDetail/trainingDetail';
 })
 export class AboutPage {
 
-  test; // 変数を定義
+  // 変数を定義
+  test;
+  itemArray;
 
   constructor(public navCtrl: NavController) {
-    this.test = "Test text";  // 変数を初期化
+    // 変数を初期化
+    this.test = "Test text";
+    this.itemArray = [
+      {itemName: "Name 1"},
+      {itemName: "Name 2"},
+      {itemName: "Name 3"}
+    ];
   }
 
   goToMenuDetailPage() {
