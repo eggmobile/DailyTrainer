@@ -11,6 +11,7 @@
   <button ion-button (click)="goToTrainingDetailPage()">Go To TrainingDetailPage</button>
   <!-- ディレクティブのテスト -->
   <p>{{ test }}</p>
+
   <p>Single</p>
   <ion-item>
     <h2>Name 0</h2>
@@ -19,6 +20,7 @@
   <p>Using NgFor</p>
   <ion-item *ngFor="let item of itemArray">
     <h2>{{ item.itemName }}</h2>
+    <p>{{ item.itemColor }}</p>
   </ion-item>
 
 </ion-content>
