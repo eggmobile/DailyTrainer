@@ -9,8 +9,10 @@ import { TrainingDetailPage } from '../trainingDetail/trainingDetail';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  test; // 変数を定義
 
+  constructor(public navCtrl: NavController) {
+    this.test = "Test text";  // 変数を初期化
   }
 
   goToMenuDetailPage() {
