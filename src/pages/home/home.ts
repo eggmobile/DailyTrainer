@@ -9,6 +9,7 @@ export class HomePage {
 
   isHome; // 変数定義
   featureArray;
+  trainedTimes;
 
 
   constructor(public navCtrl: NavController) {
