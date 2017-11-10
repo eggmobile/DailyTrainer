@@ -5,6 +5,9 @@
 </ion-header>
 
 <ion-content padding>
+
+  <p>{{ isHome }}</p>
+
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button icon-only>
@@ -25,6 +28,10 @@
       </button>
     </ion-buttons>
   </ion-toolbar>
+
+  <button ion-button *ngFor="let button of featureArray">
+      <h1>{{ button.featureTitle }}</h1>
+    </button>
 
 <input type="image" class="item_a">
 <input type="image" class="item_b">
