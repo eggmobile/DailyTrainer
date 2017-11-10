@@ -1,35 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      MenuDetail
+      {{featureTitle}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+    <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
   <ion-list>
     
-    <ion-item>
-      <ion-label>Bench press</ion-label>
+    <ion-item *ngFor="let item of detailTitle">
+      <ion-label>{{ item.itemName }}</ion-label>
       <ion-checkbox></ion-checkbox>
     </ion-item>
-    <ion-item>
-      <ion-label>Butterfly</ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item>
-      <ion-label>Cable Crossover</ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item>
-      <ion-label>Pepperoni</ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item>
-      <ion-label>Pepperoni</ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
+
   </ion-list>
+
+  <button ion-button>Done</button>
 
 
 </ion-content>
