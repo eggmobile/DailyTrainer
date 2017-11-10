@@ -17,9 +17,9 @@ export class AboutPage {
     // 変数を初期化
     this.test = "Test text";
     this.itemArray = [
-      {itemName: "Name 1"},
-      {itemName: "Name 2"},
-      {itemName: "Name 3"}
+      {itemName: "Name 1", itemColor: "red"},
+      {itemName: "Name 2", itemColor: "blue"},
+      {itemName: "Name 3", itemColor: "black"}
     ];
   }
 
