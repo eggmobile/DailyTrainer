@@ -29,14 +29,16 @@
     </ion-buttons>
   </ion-toolbar>
 
-  <button ion-button *ngFor="let button of featureArray">
+  <button ion-button (click)="goToMenuDetailPage()" *ngFor="let button of featureArray">
       <h1>{{ button.featureTitle }}</h1>
     </button>
 
-<input type="image" class="item_a">
-<input type="image" class="item_b">
-<input type="image" class="item_c">
-<input type="image" class="item_d">
-
+  <input type="image" class="item_a" (click)="goToMenuDetailPage()">
+  <input type="image" class="item_b">
+  <input type="image" class="item_c">
+  <input type="image" class="item_d">
+  <button ion-button (click)="goToMenuDetailPage()">Go To MenuDetailPage</button>
+  
+</ion-content>>
 
 

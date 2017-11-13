@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { MenuDetailPage } from '../menuDetail/menuDetail';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -21,5 +23,10 @@ export class HomePage {
       {featureTitle: "Leg", featureImg: "", trainedTimes: 4}
     ];
   }
+
+  goToMenuDetailPage() {
+    this.navCtrl.push(MenuDetailPage);
+  }
+
 
 }
