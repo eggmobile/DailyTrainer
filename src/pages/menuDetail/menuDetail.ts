@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { TrainingDetailPage } from '../trainingDetail/trainingDetail';
 
 @Component({
@@ -8,9 +8,10 @@ import { TrainingDetailPage } from '../trainingDetail/trainingDetail';
 })
 export class MenuDetailPage {
 featureTitle;
-  detailTitle;
+detailTitle;
+public featureId;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.featureTitle = "Chest";
     this.detailTitle = [
@@ -20,6 +21,9 @@ featureTitle;
       {itemName: "Crossover with Bands"},
       {itemName: "Dumbbell Flyes"}
     ];
+    this.featureId = navParams.get("featureId");
+    console.log(this.featureId);
+
   }
   goToTrainingDetailPage() {
     this.navCtrl.push(TrainingDetailPage);

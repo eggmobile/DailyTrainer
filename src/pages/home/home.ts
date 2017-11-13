@@ -25,7 +25,9 @@ export class HomePage {
   }
 
   goToMenuDetailPage() {
-    this.navCtrl.push(MenuDetailPage);
+    this.navCtrl.push(MenuDetailPage,{
+      featureId: "0"
+    });
   }
 
 
