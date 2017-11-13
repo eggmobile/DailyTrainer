@@ -26,7 +26,8 @@ public featureId;
 
   }
   goToTrainingDetailPage() {
-    this.navCtrl.push(TrainingDetailPage);
+    this.navCtrl.push(TrainingDetailPage, 
+      {trainingId: "1"});
   }
 
 }

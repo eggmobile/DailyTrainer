@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-training-detail',
@@ -11,8 +11,12 @@ detailTitle = "course 1" ; //詳細コース名
 instructionImg; 
 instructionYouTube;
 description;
+trainingId;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+this.trainingId = navParams.get("trainingId");
+console.log(this.trainingId);
 
   }
 
