@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content padding>
+  <button ion-button (click)="goToTrainingDetailPage()">Go To TrainingDetailPage</button>
 
     <ion-searchbar
     [(ngModel)]="myInput"
@@ -17,9 +18,13 @@
 
   <ion-list>
     
-    <ion-item *ngFor="let item of detailTitle">
-      <ion-label>{{ item.itemName }}</ion-label>
-      <ion-checkbox></ion-checkbox>
+    <ion-item   *ngFor="let item of detailTitle" >
+      <ion-label (click)="goToTrainingDetailPage()">{{ item.itemName }}</ion-label>
+      
+      <ion-checkbox></ion-checkbox> 
+       
+
+      
     </ion-item>
 
   </ion-list>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { TrainingDetailPage } from '../trainingDetail/trainingDetail';
 
 @Component({
   selector: 'page-menu-detail',
@@ -20,6 +21,8 @@ featureTitle;
       {itemName: "Dumbbell Flyes"}
     ];
   }
-    
+  goToTrainingDetailPage() {
+    this.navCtrl.push(TrainingDetailPage);
+  }
 
 }
