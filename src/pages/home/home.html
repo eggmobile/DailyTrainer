@@ -29,9 +29,9 @@
     </ion-buttons>
   </ion-toolbar>
 
-  <button ion-button (click)="goToMenuDetailPage()" *ngFor="let button of featureArray">
-      <h1>{{ button.featureTitle }}</h1>
-    </button>
+  <ion-item  *ngFor="let button of featureArray">
+      <ion-label (click)="goToMenuDetailPage()">{{ button.featureTitle }}</ion-label>
+  </ion-item>
 
   <input type="image" class="item_a" (click)="goToMenuDetailPage()">
   <input type="image" class="item_b">
