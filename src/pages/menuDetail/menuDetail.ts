@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TrainingDetailPage } from '../trainingDetail/trainingDetail';
+import { HomePage} from '../home/home';
 
 @Component({
   selector: 'page-menu-detail',
@@ -30,4 +31,10 @@ public featureId;
       {trainingId: "1"});
   }
 
+
+
+
+  goToHomePage() {
+    this.navCtrl.push(HomePage);
+  }
 }
