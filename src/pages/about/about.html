@@ -25,6 +25,6 @@
 
   <p>FeatureItems Firebase</p>
   <ion-item class="text" *ngFor="let item of featuresItems | async">
-    {{item | json}}
+    {{item.description}}
   </ion-item>
 </ion-content>
