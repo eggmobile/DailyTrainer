@@ -1,0 +1,6 @@
+ブランチを作る際の命名規則
+feature-{画面名}-{ユーザー名}
+例) feature-menuDetail-ymurayama
+
+コマンド
+$ git branch feature-menuDetail-ymurayama
