@@ -23,4 +23,8 @@
     <p>{{ item.itemColor }}</p>
   </ion-item>
 
+  <p>FeatureItems Firebase</p>
+  <ion-item class="text" *ngFor="let item of featuresItems | async">
+    {{item | json}}
+  </ion-item>
 </ion-content>

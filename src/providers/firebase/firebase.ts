@@ -16,7 +16,7 @@ export class FirebaseProvider {
    constructor(public afd: AngularFireDatabase) { }
   
    getFeaturesItems() {
-     return this.afd.list('/features/');
+     return this.afd.list('features').valueChanges();
    }
   
    addItem(name) {

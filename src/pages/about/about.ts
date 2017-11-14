@@ -5,6 +5,7 @@ import { MenuDetailPage } from '../menuDetail/menuDetail';
 import { TrainingDetailPage } from '../trainingDetail/trainingDetail';
 import { AngularFireList } from 'angularfire2/database';
 import { FirebaseProvider } from './../../providers/firebase/firebase';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'page-about',
@@ -15,7 +16,7 @@ export class AboutPage {
   // 変数を定義
   test;
   itemArray;
-  featuresItems: AngularFireList<any[]>;
+  featuresItems: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public firebaseProvider: FirebaseProvider) {
     // 変数を初期化
@@ -25,8 +26,8 @@ export class AboutPage {
       {itemName: "Name 2", itemColor: "blue"},
       {itemName: "Name 3", itemColor: "black"}
     ];
-    this.featuresItems = this.firebaseProvider.getFeaturesItems();;
-    console.log(this.featuresItems);
+    
+    this.featuresItems = this.firebaseProvider.getFeaturesItems();
   }
 
   goToMenuDetailPage() {
