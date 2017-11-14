@@ -1,0 +1,14 @@
+2017-11-14
+yoichi.murayama
+
+[更新内容]
+Firebase の導入
+画面遷移の実装
+
+[実施事項メモ]
+Firebase実装の参考サイト
+https://devdactic.com/ionic-firebase-angularfire/
+
+[次回実施事項]
+
+[村山作業]

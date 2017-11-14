@@ -1,20 +1,20 @@
 2017-11-08
 yoichi.murayama
 
-[XV“à—e]
-MenuDetail‚ÆTrainingDetail‚Æ‚¢‚¤‰æ–Ê‚ğ’Ç‰Á‚µ‚Ü‚µ‚½B
-‰º‚ÌƒRƒ}ƒ“ƒh‚ğÀs‚µ‚ÄAƒvƒ‹‚µ‚Ä‚­‚¾‚³‚¢B
+[æ›´æ–°å†…å®¹]
+MenuDetailã¨TrainingDetailã¨ã„ã†ç”»é¢ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+ä¸‹ã®ã‚³ãƒãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¦ã€ãƒ—ãƒ«ã—ã¦ãã ã•ã„ã€‚
 $ git pull
 
-[À{–€ƒƒ‚]
-Šeƒy[ƒW‚ÌHTMLƒtƒ@ƒCƒ‹‚ğ•ÒW‚µ‚ÄAÃ“I‰æ–Ê‚ğì¬‚·‚éB
+[å®Ÿæ–½äº‹é …ãƒ¡ãƒ¢]
+å„ãƒšãƒ¼ã‚¸ã®HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç·¨é›†ã—ã¦ã€é™çš„ç”»é¢ã‚’ä½œæˆã™ã‚‹ã€‚
 
-[Ÿ‰ñÀ{–€]
-‰æ–Ê‘JˆÚ
-ngFor‚Ì—˜—piHome, MenuDetailj
-‰æ–Ê‘JˆÚ‚Éƒf[ƒ^‚ğæ“¾(TrainingDetail)
+[æ¬¡å›å®Ÿæ–½äº‹é …]
+ç”»é¢é·ç§»
+ngForã®åˆ©ç”¨ï¼ˆHome, MenuDetailï¼‰
+ç”»é¢é·ç§»æ™‚ã«ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—(TrainingDetail)
 
-[‘ºRì‹Æ]
-Firebase Realtime Database‚Ì\’z
-GmailƒAƒJƒEƒ“ƒgì¬
-DBİŒviJSONj
+[æ‘å±±ä½œæ¥­]
+Firebase Realtime Databaseã®æ§‹ç¯‰
+Gmailã‚¢ã‚«ã‚¦ãƒ³ãƒˆä½œæˆ
+DBè¨­è¨ˆï¼ˆJSONï¼‰
