@@ -28,6 +28,8 @@ export class AboutPage {
     ];
     
     this.featuresItems = this.firebaseProvider.getFeaturesItems();
+    // Ovservableのログ出力
+    console.log(this.featuresItems.subscribe(value => {console.log(value)}));
   }
 
   goToMenuDetailPage() {
