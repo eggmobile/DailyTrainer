@@ -13,6 +13,20 @@ import { TrainingDetailPage } from '../pages/trainingDetail/trainingDetail';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HttpModule } from '@angular/http';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { FirebaseProvider } from '../providers/firebase/firebase';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAiQ0OzM_rkgB-w4_qOB3TLft3zaHEcd_k",
+  authDomain: "dailytrainer-60c50.firebaseapp.com",
+  databaseURL: "https://dailytrainer-60c50.firebaseio.com",
+  projectId: "dailytrainer-60c50",
+  storageBucket: "dailytrainer-60c50.appspot.com",
+  messagingSenderId: "779233572284"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -25,6 +39,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -40,7 +57,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseProvider
   ]
 })
 export class AppModule {}
