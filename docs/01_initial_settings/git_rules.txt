@@ -3,4 +3,10 @@ feature-{画面名}-{ユーザー名}
 例) feature-menuDetail-ymurayama
 
 コマンド
+// ブランチの作成
 $ git branch feature-menuDetail-ymurayama
+
+// チェックアウト
+// チェックアウトすることで、作業ブランチを変更することができます。
+// 変更しないとmasterのままです。
+$ git checkout feature-menuDetail-ymurayama
