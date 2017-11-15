@@ -22,11 +22,13 @@ featuresItems: Observable<any[]>;
     // this.featuresItems = this.firebaseProvider.getFeaturesItems();
     // this.feature = this.firebaseProvider.getSpecificFeature(0);
     // console.log(this.feature);
-    // let ctrl = this;
+    let ctrl = this;
     this.firebaseProvider.getSpecificFeature(0).subscribe(res => {
       console.log(res); 
-      // ctrl.feature = res[0]; 
-      // console.log(ctrl.feature);
+      ctrl.feature = res[0]; 
+      console.log(ctrl.feature);
+      ctrl.featureTitle = res[0]['feature_name'];
+      console.log(ctrl.featureTitle);
     });
 
     this.detailTitle = [
