@@ -25,16 +25,9 @@ export class FirebaseProvider {
 
   // 特定Featureのみ取得する
   getSpecificFeature(featureId) {
-    // if(!this.features){
-    //   this.getFeaturesItems();
-    // }
-    // let featuresArray = this.features.subscribe(value => {console.log(value);});
-    // console.log(featuresArray);
-    let value;
-    return this.afd.list('/features/', ref => ref.orderByChild('description').equalTo('@@@@')).valueChanges();
-    // console.log(value);
-    // return value;
-    // return featuresArray[featureId];  
+    let pathForQuery = '/features/' + featureId;
+    console.log(pathForQuery);
+    return this.afd.list(pathForQuery).valueChanges(); 
   }
 
   addItem(name) {

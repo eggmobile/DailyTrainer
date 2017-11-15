@@ -25,9 +25,9 @@ featuresItems: Observable<any[]>;
     let ctrl = this;
     this.firebaseProvider.getSpecificFeature(0).subscribe(res => {
       console.log(res); 
-      ctrl.feature = res[0]; 
+      ctrl.feature = res; 
       console.log(ctrl.feature);
-      ctrl.featureTitle = res[0]['feature_name'];
+      ctrl.featureTitle = res['feature_name'];
       console.log(ctrl.featureTitle);
     });
 
