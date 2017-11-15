@@ -32,12 +32,19 @@
   <ion-item  *ngFor="let button of featureArray">
       <ion-label (click)="goToMenuDetailPage()">{{ button.featureTitle }}</ion-label>
   </ion-item>
+  
+  
+  <p>FeatureItems Firebase</p>
+  <ion-item class="text" *ngFor="let item of featuresName | async">
+      {{ item.feature_name }}      
+  </ion-item>
 
-  <input type="image" class="item_a" (click)="goToMenuDetailPage()">
+
+  <!-- <input type="image" class="item_a" (click)="goToMenuDetailPage()">
   <input type="image" class="item_b">
   <input type="image" class="item_c">
   <input type="image" class="item_d">
-  <button ion-button (click)="goToMenuDetailPage()">Go To MenuDetailPage</button>
+  <button ion-button (click)="goToMenuDetailPage()">Go To MenuDetailPage</button> -->
   
 </ion-content>>
 
