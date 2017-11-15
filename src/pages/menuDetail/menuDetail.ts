@@ -20,8 +20,14 @@ featuresItems: Observable<any[]>;
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebaseProvider: FirebaseProvider) {
    
     // this.featuresItems = this.firebaseProvider.getFeaturesItems();
-    this.feature = this.firebaseProvider.getSpecificFeature(0);
-    console.log(this.feature.feature_name);
+    // this.feature = this.firebaseProvider.getSpecificFeature(0);
+    // console.log(this.feature);
+    // let ctrl = this;
+    this.firebaseProvider.getSpecificFeature(0).subscribe(res => {
+      console.log(res); 
+      // ctrl.feature = res[0]; 
+      // console.log(ctrl.feature);
+    });
 
     this.detailTitle = [
       {itemName: "Bench press"},
@@ -31,7 +37,6 @@ featuresItems: Observable<any[]>;
       {itemName: "Dumbbell Flyes"}
     ];
     this.featureId = navParams.get("featureId");
-    
 
   }
   goToTrainingDetailPage() {

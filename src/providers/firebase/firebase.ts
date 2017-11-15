@@ -12,26 +12,40 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 */
 @Injectable()
 export class FirebaseProvider {
-  
-   constructor(public afd: AngularFireDatabase) { }
-  
-   getFeaturesItems() {
-     return this.afd.list('features').valueChanges();
-   }
-  
-   getSpecificFeature(featureId) {
-    return this.afd.list('features/' + featureId).valueChanges();
+  features;
+
+  constructor(public afd: AngularFireDatabase) {
+
   }
 
-   addItem(name) {
-     this.afd.list('/features/').push(name);
-   }
-  
-   removeItem(id) {
-     this.afd.list('/features/').remove(id);
-   }
+  // 全Featureを取得する
+  getFeaturesItems() {
+    return this.afd.list('/features/').valueChanges();
+  }
+
+  // 特定Featureのみ取得する
+  getSpecificFeature(featureId) {
+    // if(!this.features){
+    //   this.getFeaturesItems();
+    // }
+    // let featuresArray = this.features.subscribe(value => {console.log(value);});
+    // console.log(featuresArray);
+    let value;
+    return this.afd.list('/features/', ref => ref.orderByChild('description').equalTo('@@@@')).valueChanges();
+    // console.log(value);
+    // return value;
+    // return featuresArray[featureId];  
+  }
+
+  addItem(name) {
+    this.afd.list('/features/').push(name);
+  }
+
+  removeItem(id) {
+    this.afd.list('/features/').remove(id);
+  }
 
 
 
 
- }
+}
