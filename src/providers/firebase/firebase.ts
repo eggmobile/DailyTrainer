@@ -19,6 +19,10 @@ export class FirebaseProvider {
      return this.afd.list('features').valueChanges();
    }
   
+   getSpecificFeature(featureId) {
+    return this.afd.list('features/' + featureId).valueChanges();
+  }
+
    addItem(name) {
      this.afd.list('/features/').push(name);
    }
@@ -26,4 +30,8 @@ export class FirebaseProvider {
    removeItem(id) {
      this.afd.list('/features/').remove(id);
    }
+
+
+
+
  }
