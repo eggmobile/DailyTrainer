@@ -19,16 +19,8 @@ featuresItems: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebaseProvider: FirebaseProvider) {
    
-    // this.featuresItems = this.firebaseProvider.getFeaturesItems();
-    // this.feature = this.firebaseProvider.getSpecificFeature(0);
-    // console.log(this.feature);
-    let ctrl = this;
     this.firebaseProvider.getSpecificFeature(0).subscribe(res => {
-      console.log(res); 
-      ctrl.feature = res; 
-      console.log(ctrl.feature);
-      ctrl.featureTitle = res['feature_name'];
-      console.log(ctrl.featureTitle);
+      console.log(res);
     });
 
     this.detailTitle = [

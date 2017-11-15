@@ -26,8 +26,7 @@ export class FirebaseProvider {
   // 特定Featureのみ取得する
   getSpecificFeature(featureId) {
     let pathForQuery = '/features/' + featureId;
-    console.log(pathForQuery);
-    return this.afd.list(pathForQuery).valueChanges(); 
+    return this.afd.object(pathForQuery).valueChanges();
   }
 
   addItem(name) {
