@@ -1,15 +1,15 @@
 ブランチを作る際の命名規則
-feature-{画面名}-{ユーザー名}
-例) feature-menuDetail-ymurayama
+feature-{画面名}-{ブランチ作成日}-{ユーザー名}
+例) feature-menuDetail-20171115-ymurayama
 
 ブランチを作成してチェックアウト（作業ブランチの変更）する
 // ブランチを作成する
-$ git branch feature-menuDetail-ymurayama
+$ git branch feature-menuDetail-20171115-ymurayama
 
 // チェックアウト
 // チェックアウトすることで、作業ブランチを変更することができます。
 // 変更しないとmasterのままです。
-$ git checkout feature-menuDetail-ymurayama
+$ git checkout feature-menuDetail-20171115-ymurayama
 
 
 マージ
@@ -19,6 +19,6 @@ $ git checkout feature-menuDetail-ymurayama
 // マージしたいブランチ（マージ先）にチェックアウトする
 $ git checkout master
 // マージ元となるブランチを指定してmasterへマージする
-$ git merge feature-menuDetail-ymurayama
+$ git merge feature-menuDetail-20171115-ymurayama
 
 
