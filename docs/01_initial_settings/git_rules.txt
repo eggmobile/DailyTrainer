@@ -2,11 +2,23 @@
 feature-{画面名}-{ユーザー名}
 例) feature-menuDetail-ymurayama
 
-コマンド
-// ブランチの作成
+ブランチを作成してチェックアウト（作業ブランチの変更）する
+// ブランチを作成する
 $ git branch feature-menuDetail-ymurayama
 
 // チェックアウト
 // チェックアウトすることで、作業ブランチを変更することができます。
 // 変更しないとmasterのままです。
 $ git checkout feature-menuDetail-ymurayama
+
+
+マージ
+// masterブランチ（マージ先）にfeatureブランチ（マージ元）をマージする例
+// マージ後は、masterブランチにfeatureブランチの変更が反映されます。
+
+// マージしたいブランチ（マージ先）にチェックアウトする
+$ git checkout master
+// マージ元となるブランチを指定してmasterへマージする
+$ git merge feature-menuDetail-ymurayama
+
+
