@@ -12,32 +12,22 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 */
 @Injectable()
 export class FirebaseProvider {
-  features;
 
   constructor(public afd: AngularFireDatabase) {
-
   }
 
-  // 全Featureを取得する
+  // 全Featureを配列で取得する
   getFeaturesItems() {
+    // list()メソッドを利用することで、Featureオブジェクトを配列として取得できる。
     return this.afd.list('/features/').valueChanges();
   }
 
-  // 特定Featureのみ取得する
+  // 特定Featureのみオブジェクトとして取得する
   getSpecificFeature(featureId) {
     let pathForQuery = '/features/' + featureId;
+    // 配列の時はlist()メソッドを使うが、オブジェクトを取得したい場合はobject()メソッドを使用する。
     return this.afd.object(pathForQuery).valueChanges();
   }
-
-  addItem(name) {
-    this.afd.list('/features/').push(name);
-  }
-
-  removeItem(id) {
-    this.afd.list('/features/').remove(id);
-  }
-
-
 
 
 }

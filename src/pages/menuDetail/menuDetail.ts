@@ -12,18 +12,16 @@ import { Observable } from 'rxjs/Observable';
 })
 export class MenuDetailPage {
 featureTitle;
-feature;
 detailTitle;
 public featureId;
 featuresItems: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebaseProvider: FirebaseProvider) {
    
-    let ctrl = this;
+    // FeatureのIDからFeatureのオブジェクトを取得
     this.firebaseProvider.getSpecificFeature(0).subscribe(res => {
-      console.log(res);
-      ctrl.feature = res;
-      ctrl.featureTitle = ctrl.feature.feature_name;
+      // console.log(res);
+      this.featureTitle = res['feature_name'];
     });
 
     this.detailTitle = [
