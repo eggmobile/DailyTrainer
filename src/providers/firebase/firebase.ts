@@ -29,5 +29,11 @@ export class FirebaseProvider {
     return this.afd.object(pathForQuery).valueChanges();
   }
 
+  getSpecificTraings(traingsId) {
+    let pathForQuery = '/traings/' + traingsId;
+    // 配列の時はlist()メソッドを使うが、オブジェクトを取得したい場合はobject()メソッドを使用する。
+    return this.afd.object(pathForQuery).valueChanges();
+  }
+
 
 }

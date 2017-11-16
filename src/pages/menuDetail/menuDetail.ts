@@ -13,7 +13,10 @@ import { Observable } from 'rxjs/Observable';
 export class MenuDetailPage {
 featureTitle;
 detailTitle;
+trainingTitleArray=[];
 public featureId;
+public traingsId;
+public trainingArray;
 featuresItems: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebaseProvider: FirebaseProvider) {
@@ -21,16 +24,25 @@ featuresItems: Observable<any[]>;
     // FeatureのIDからFeatureのオブジェクトを取得
     this.firebaseProvider.getSpecificFeature(0).subscribe(res => {
       // console.log(res);
+      this.trainingArray = res['training_array'][0];
+      console.log(this.trainingArray);
       this.featureTitle = res['feature_name'];
-    });
+   
 
-    this.detailTitle = [
-      {itemName: "Bench press"},
-      {itemName: "Butterfly"},
-      {itemName: "Cable Crossover"},
-      {itemName: "Crossover with Bands"},
-      {itemName: "Dumbbell Flyes"}
-    ];
+    for(let n=0; n<this.trainingArray.length; n++){
+    this.firebaseProvider.getSpecificTraings(n).subscribe(res => {
+     this.trainingTitleArray[n] = res['training_name'];
+     console.log(this.trainingTitleArray);
+     })};
+    }); 
+
+    // this.detailTitle = [
+    //   {itemName: "Bench press"},
+    //   {itemName: "Butterfly"},
+    //   {itemName: "Cable Crossover"},
+    //   {itemName: "Crossover with Bands"},
+    //   {itemName: "Dumbbell Flyes"}
+    // ];
     this.featureId = navParams.get("featureId");
 
   }
